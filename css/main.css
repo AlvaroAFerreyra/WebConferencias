@@ -96,6 +96,11 @@ html{
 
 body{
   background-color: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2{
+  font-family: 'Oswald', sans-serif;
 }
 
 /*HEADER*/
@@ -105,6 +110,19 @@ body{
   height: 100vh;
   background-position: top center;
   background-size: cover;
+}
+
+.nombre_sitio{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 5.9vw;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width:768px){
+  .nombre_sitio{
+    font-size: 9vw;
+    margin: 0;
+  }
 }
 
 .contenido_header{
@@ -154,6 +172,7 @@ body{
 
 .informacion_evento p i{
   color: #fe4918;  
+  font-size: 2rem;
 }
 
 .fecha{
@@ -164,6 +183,15 @@ body{
   float: right;
   text-align: right;
 }
+
+.eslogan{
+  text-transform: none !important;
+}
+
+.eslogan span{
+  font-weight: bold;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
