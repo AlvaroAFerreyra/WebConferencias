@@ -99,6 +99,32 @@ body{
   font-family: 'Open Sans', sans-serif;
 }
 
+/*GLOBALES*/
+
+.contenedor{
+  width: 98%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width:480px){
+  .contenedor{
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width:768px){
+  .contenedor{
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width:992px){
+  .contenedor{
+    width: 90%;
+    max-width: 1100px;
+  }
+}
+
 h2{
   font-family: 'Oswald', sans-serif;
 }
@@ -162,7 +188,6 @@ h2{
   }
 }
 
-
 .informacion_evento p{
   margin: 0;
   display: inline;
@@ -190,6 +215,66 @@ h2{
 
 .eslogan span{
   font-weight: bold;
+}
+
+/*BARRA*/
+
+.barra{
+  background-color: #353535;
+  padding: 20px 0;
+}
+
+.logo{
+  width: 80%;
+}
+
+.logo img{
+  width: 100%;
+}
+
+@media only screen and (min-width:768px){
+  .logo{
+    width: 33%;
+    float: left;
+  }
+}
+
+.navegacion_principal{
+  display: none;
+}
+
+.navegacion_principal a{
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .5s ease;
+}
+
+.navegacion_principal a:hover{
+  background-color: #fe4918;
+}
+
+.navegacion_principal a:last-child{
+  border: 2px solid #fe4918;
+}
+
+@media only screen and (min-width:768px){
+  .navegacion_principal a{
+    margin-right: 10px;
+    display: inline-block;
+    padding: 10px 10px;
+  }
+}
+
+@media only screen and (min-width:768px){
+  .navegacion_principal{
+    width: 66.6%;
+    float: right;
+    text-align: right;
+    display: block;
+  }
 }
 
 /* ==========================================================================
