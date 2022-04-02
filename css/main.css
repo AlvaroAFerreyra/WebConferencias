@@ -125,8 +125,29 @@ body{
   }
 }
 
+.seccion{
+  padding: 30px 0;
+}
+
+.seccion p{
+  font-size: 1.2em;
+  text-align: center;
+}
+
 h2{
   font-family: 'Oswald', sans-serif;
+  font-size: 2.4em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2::after{
+  content: "";
+  margin: 0 auto;
+  background-image: url(../img/separador.png);
+  height: 30px;
+  width: 100px;
+  display: block;
 }
 
 /*HEADER*/
@@ -226,6 +247,7 @@ h2{
 
 .logo{
   width: 80%;
+  float: left;
 }
 
 .logo img{
@@ -235,7 +257,6 @@ h2{
 @media only screen and (min-width:768px){
   .logo{
     width: 33%;
-    float: left;
   }
 }
 
@@ -265,6 +286,10 @@ h2{
     margin-right: 10px;
     display: inline-block;
     padding: 10px 10px;
+    width: auto;
+    display: inline-block;
+    text-align: center;
+    margin: 0 10px 0 0;
   }
 }
 
@@ -275,6 +300,33 @@ h2{
     text-align: right;
     display: block;
   }
+}
+
+/*MENÚ MÓVIL*/
+
+.menu_movil{
+  width: 60px;
+  display: block;
+  float: right;
+  text-align: right;
+  margin-top: 12px;
+}
+
+.menu_movil:hover{
+  cursor: pointer;
+}
+
+@media only screen and (min-width:768px){
+  .menu_movil{
+    display: none;
+  }
+}
+
+.menu_movil span{
+  height: 8px;
+  margin-bottom: 6px;
+  background-color: white;
+  display: block;
 }
 
 /* ==========================================================================
