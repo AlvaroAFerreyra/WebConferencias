@@ -483,6 +483,14 @@ ul{
 
 .invitado img{
   max-width: 100%;
+  filter: gray; 
+  -webkit-filter: grayscale(1);
+  -webkit-transition: all .5s ease-in-out;
+}
+
+.invitado:hover img{
+  -webkit-filter: grayscale(0);
+  -webkit-transform: scale(1.1);
 }
 
 .invitado p{
@@ -497,6 +505,65 @@ ul{
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   color: #fe4918;
+  -webkit-transition: all .5s ease-in-out;
+}
+
+.invitado:hover p{
+  bottom: -80px;
+  opacity: 0;
+}
+
+/*CONTADOR*/
+
+.parallax::before{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-filter: brightness(.8);
+}
+
+.contador{
+  position: relative;
+  height: auto;
+}
+
+.contador::before{
+  background-image: url(../img/bg-resumen.jpg);
+  content: "";
+}
+
+.resumen_evento{
+  position: relative;
+  padding: 120px 0;
+}
+
+.resumen_evento li{
+  width: 50%;
+  float: left;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+}
+
+@media only screen and (min-width:768px){
+  .resumen_evento li{
+    width: 25%;
+  }
+}
+
+.numero{
+  color: #fe4918;
+  font-size: 4em;
+  display: block;
+  margin: 0 0 10px 0;
 }
 
 /* ==========================================================================
