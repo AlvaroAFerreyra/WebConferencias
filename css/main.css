@@ -168,6 +168,10 @@ ul{
   color: #fe4918;
 }
 
+.button.transparente{
+  background-color: transparent;
+}
+
 .button{
   background-color: #fe4918;
   padding: 10px 40px;
@@ -713,6 +717,57 @@ blockquote p::before{
   display: block;
   text-transform: none;
   margin-top: 5px;
+}
+
+/*NEWSLETTER*/
+
+.newsletter{
+  position: relative;
+  height: auto;
+}
+
+.newsletter::before{
+  background-image: url(../img/bg-newsletter.jpg);
+  content: "";
+}
+
+.newsletter .contenido{
+  padding: 100px 0;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.newsletter .contenido p{
+  font-size: 1.2em;
+  text-transform: lowercase;
+}
+
+.newsletter .contenido h3{
+  color: white;
+  text-transform: uppercase;
+  font-size: 7vw;
+  font-family: 'PT Sans', sans-serif;
+}
+
+/*CUENTA REGRESIVA*/
+
+.cuenta_regresiva ul li{
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+
+@media only screen and (min-width:768px){
+  .cuenta_regresiva ul li{
+    width: 25%;
+    float: left;
+  }
+}
+
+.numero.n_contador{
+  font-size: 5rem;
 }
 
 /* ==========================================================================
