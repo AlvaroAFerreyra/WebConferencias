@@ -770,6 +770,54 @@ blockquote p::before{
   font-size: 5rem;
 }
 
+/*FOOTER*/
+
+.site_footer{
+  background-color: #353535;
+  padding-top: 40px;
+  margin-top: 20px;
+}
+
+.contenido_footer > div{
+  color: white;
+  padding: 0 20px;
+  font-size: 12px;
+}
+
+@media only screen and (min-width:768px){
+  .contenido_footer > div{
+    width: 33.3%;
+    float: left;
+  }
+}
+
+footer h3{
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+footer h3 span{
+  color: #fe4918;
+}
+
+.ultimos_tweets li{
+  margin-bottom: 10px;
+}
+
+footer .redes_sociales{
+  text-align: left;
+}
+
+.copyright{
+  background-color: #2e2e2e;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin: 20px 0 0 0;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
