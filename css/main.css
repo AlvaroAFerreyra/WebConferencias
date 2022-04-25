@@ -691,6 +691,7 @@ blockquote p::before{
 
 .info_testimonial{
   padding: 0;
+  background-color: transparent;
 }
 
 .info_testimonial img{
