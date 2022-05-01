@@ -22,7 +22,12 @@
         var calcular = document.getElementById('calcular');
         var errorDiv = document.getElementById('error');
         var botonRegistro = document.getElementById('RegBtnistro');
-        var resultado = document.getElementById('lista_productos');
+        var listaProductos = document.getElementById('lista_productos');
+
+        //EXTRAS
+
+        var etiquetas = document.getElementById('etiquetas');
+        var camisas = document.getElementById('camisa_evento');
 
         calcular.addEventListener('click', calcularMontos);
 
@@ -33,11 +38,37 @@
                 regalo.focus();
             }
             else{
-                var boletosDia = pase_dia.value,
-                    boletos2dias = pase_dos_dias.value,
-                    boletosCompletos = pase_completo.value;
+                var boletosDia = parseInt(pase_dia.value, 10)|| 0,
+                    boletos2dias = parseInt(pase_dos_dias.value, 10)|| 0,
+                    boletosCompletos = parseInt(pase_completo.value, 10)|| 0,
+                    cantCamisas = parseInt(camisas.value, 10)|| 0,
+                    cantEtiquetas = parseInt(etiquetas.value, 10)|| 0;
 
-                var totalPagar = (boletosDia*30)+(boletos2dias*45)+(boletosCompletos*50);
+                var totalPagar = (boletosDia*30)+(boletos2dias*45)+(boletosCompletos*50)+(cantCamisas*10*0.93)+(cantEtiquetas*2);
+                
+                var listadoProductos = [];
+
+                if(boletosDia>=1){
+                    listadoProductos.push(boletosDia+' Pases por día');
+                }
+                if(boletos2dias>=1){    
+                    listadoProductos.push(boletos2dias+' Pases por 2 días');
+                }
+                if(boletosCompletos>=1){    
+                    listadoProductos.push(boletosCompletos+' Pases completos');
+                }
+                if(cantCamisas>=1){    
+                    listadoProductos.push(cantCamisas+' Camisas');
+                }
+                if(cantEtiquetas>=1){    
+                    listadoProductos.push(cantEtiquetas+' Etiquetas');
+                }
+                
+                listaProductos.innerHTML = '';
+
+                for(var i=0; i<listadoProductos.length; i++){
+                    listaProductos.innerHTML += listadoProductos[i] + '<br/>';
+                }
             }        
         }
 
