@@ -23,6 +23,7 @@
         var errorDiv = document.getElementById('error');
         var botonRegistro = document.getElementById('RegBtnistro');
         var listaProductos = document.getElementById('lista_productos');
+        var suma = document.getElementById('suma_total');
 
         //EXTRAS
 
@@ -30,6 +31,39 @@
         var camisas = document.getElementById('camisa_evento');
 
         calcular.addEventListener('click', calcularMontos);
+
+        pase_dia.addEventListener('blur', mostrarDias);
+        pase_dos_dias.addEventListener('blur', mostrarDias);
+        pase_completo.addEventListener('blur', mostrarDias);
+
+        nombre.addEventListener('blur', validarCampos);
+        apellido.addEventListener('blur', validarCampos);
+        email.addEventListener('blur', validarCampos);
+        email.addEventListener('blur', validarEmail);
+
+        function validarCampos(){
+            if(this.value == ''){
+                errorDiv.style.display = 'block';
+                errorDiv.innerHTML = '*Este campo es obligatorio';
+                this.style.border = '2px solid red';
+            }
+            else{
+                errorDiv.style.display = "none";
+                this.style.border = "1px solid #cccccc";
+            }
+        }
+
+        function validarEmail(){
+            if(this.value.indexOf("@") > -1){
+                errorDiv.style.display = "none";
+                this.style.border = "1px solid #cccccc";
+            }
+            else{
+                errorDiv.style.display = 'block';
+                errorDiv.innerHTML = '*E-mail inválido';
+                this.style.border = '2px solid red'
+            }
+        }
 
         function calcularMontos(event){
             event.preventDefault();
@@ -64,12 +98,36 @@
                     listadoProductos.push(cantEtiquetas+' Etiquetas');
                 }
                 
+                listaProductos.style.display = "block";
                 listaProductos.innerHTML = '';
 
                 for(var i=0; i<listadoProductos.length; i++){
                     listaProductos.innerHTML += listadoProductos[i] + '<br/>';
                 }
+                suma.innerHTML = "$ "+totalPagar.toFixed(2); 
             }        
+        }
+
+        function mostrarDias(){
+            var boletosDia = parseInt(pase_dia.value, 10)|| 0,
+                boletos2dias = parseInt(pase_dos_dias.value, 10)|| 0,
+                boletosCompletos = parseInt(pase_completo.value, 10)|| 0;
+            
+            var diasElegidos = [];
+            
+            if(boletosDia > 0){
+                diasElegidos.push('viernes');
+            }
+            if(boletos2dias > 0){
+                diasElegidos.push('viernes', 'sabado');
+            }
+            if(boletosCompletos > 0){
+                diasElegidos.push('viernes', 'sabado', 'domingo');
+            }
+
+            for(var i=0; i < diasElegidos.length; i++){
+                document.getElementById(diasElegidos[i]).style.display = "block";
+            }
         }
 
     });  //DOM CONTENT LOADED
