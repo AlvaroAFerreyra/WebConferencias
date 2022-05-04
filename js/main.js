@@ -5,6 +5,18 @@
 
     document.addEventListener('DOMContentLoaded', function(){
         
+        var map = L.map('mapa').setView([-32.947786, -60.630198], 16);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([-32.947786, -60.630198]).addTo(map)
+            .bindPopup('Conferencia<br>GDLWEBCAMP')
+            .openPopup()
+            .bindTooltip('Localización')
+            .openTooltip();
+
         //CAMPOS DATOS USUARIOS
         
         var nombre = document.getElementById('nombre');
