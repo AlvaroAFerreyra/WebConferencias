@@ -144,3 +144,9 @@
 
     });  //DOM CONTENT LOADED
 })();
+
+$(function(){
+
+    console.log("funciona");
+
+});
