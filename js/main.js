@@ -147,6 +147,11 @@
 
 $(function(){
 
+    //LETTERING
+
+    $('.nombre_sitio').lettering();
+
+
     //PROGRAMA DE CONFERENCIAS
 
     $('.programa_evento .info_curso:first').show();
