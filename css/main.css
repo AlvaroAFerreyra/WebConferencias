@@ -364,6 +364,7 @@ ul{
 
 .navegacion_principal{
   display: none;
+  width: 100%;
 }
 
 .navegacion_principal a{
@@ -373,6 +374,11 @@ ul{
   text-transform: uppercase;
   text-decoration: none;
   transition: all .5s ease;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  clear: both;
 }
 
 .navegacion_principal a:hover{
@@ -400,7 +406,7 @@ ul{
     width: 66.6%;
     float: right;
     text-align: right;
-    display: block;
+    display: block!important;
   }
 }
 

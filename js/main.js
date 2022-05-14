@@ -42,6 +42,7 @@
         var etiquetas = document.getElementById('etiquetas');
         var camisas = document.getElementById('camisa_evento');
 
+        if(document.getElementById('calcular')){
         calcular.addEventListener('click', calcularMontos);
 
         pase_dia.addEventListener('blur', mostrarDias);
@@ -141,6 +142,7 @@
                 document.getElementById(diasElegidos[i]).style.display = "block";
             }
         }
+        }
 
     });  //DOM CONTENT LOADED
 })();
@@ -166,6 +168,12 @@ $(function(){
             $('.barra').removeClass('fixed');
             $('body').css({'margin-top': '0px'});
         }    
+    });
+
+    //MENÚ RESPONSIVE
+
+    $('.menu_movil').on('click', function(){
+        $('.navegacion_principal').slideToggle();
     });
 
     //PROGRAMA DE CONFERENCIAS
