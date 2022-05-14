@@ -193,10 +193,17 @@ $(function(){
 
     //ANIMACIONES PARA LOS NÚMEROS
 
-    $('.resumen_evento li:nth-child(1) p').animateNumber({number:6}, 1200);
-    $('.resumen_evento li:nth-child(2) p').animateNumber({number:15}, 1200);
-    $('.resumen_evento li:nth-child(3) p').animateNumber({number:3}, 2000);
-    $('.resumen_evento li:nth-child(4) p').animateNumber({number:9}, 1500);
+    var resumenLista = $('.resumen_evento');
+    if(resumenLista.length > 0) {
+        $('.resumen_evento').waypoint(function(){
+            $('.resumen_evento li:nth-child(1) p').animateNumber({number:6}, 1200);
+            $('.resumen_evento li:nth-child(2) p').animateNumber({number:15}, 1200);
+            $('.resumen_evento li:nth-child(3) p').animateNumber({number:3}, 2000);
+            $('.resumen_evento li:nth-child(4) p').animateNumber({number:9}, 1500);
+        }, {
+            offset: '60%'
+        });    
+    }
 
     //CUENTA REGRESIVA
 
