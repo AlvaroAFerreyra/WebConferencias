@@ -16,13 +16,21 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
+<<<<<<< HEAD
   <link rel="stylesheet" href="../WebConferencias/css/normalize.css">
+=======
+  <link rel="stylesheet" href="css/normalize.css">
+>>>>>>> 814b8413078c4dfdf5715a8ab04362b460e75456
   <link rel="stylesheet" href="../WebConferencias/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&family=PT+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+<<<<<<< HEAD
   <link rel="stylesheet" href="../WebConferencias/css/main.css">
+=======
+  <link rel="stylesheet" href="css/main.css">
+>>>>>>> 814b8413078c4dfdf5715a8ab04362b460e75456
 
   <meta name="theme-color" content="#fafafa">
 </head>
