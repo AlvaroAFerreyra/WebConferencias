@@ -1106,6 +1106,7 @@ input[disabled].button{
   font-size: 1.6em;
 }
 
+<<<<<<< HEAD
 /*COLORBOX*/
 
 .cboxElement{
@@ -1113,6 +1114,8 @@ input[disabled].button{
   text-align: center;
 }
 
+=======
+>>>>>>> c1bd86fc194e3cec0afb1b49ebb945598f79216e
 /* ==========================================================================
    Helper classes
    ========================================================================== */

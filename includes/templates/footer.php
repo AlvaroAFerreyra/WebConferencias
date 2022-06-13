@@ -35,6 +35,7 @@
   <script src="js/jquery.countdown.min.js"></script>
   <script src="js/jquery.lettering.js"></script>
   <script src="js/jquery.waypoints.min.js"></script>
+<<<<<<< HEAD
 
   <?php
     $archivo = basename($_SERVER['PHP_SELF']);
@@ -46,6 +47,16 @@
     }
   ?>
 
+=======
+<<<<<<< HEAD
+  <script src="js/jquery.colorbox-min.js"></script>
+=======
+<<<<<<< HEAD
+  <script src="js/jquery.colorbox-min.js"></script>
+=======
+>>>>>>> 473fd4c457cfa7ea166280fec9960793661e028e
+>>>>>>> c290b404bb34c2b174df2f9043052a643ad012de
+>>>>>>> c1bd86fc194e3cec0afb1b49ebb945598f79216e
   <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
   <script src="js/main.js"></script>
 
