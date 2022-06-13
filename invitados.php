@@ -19,6 +19,7 @@
                     while ( $invitados = $resultado->fetch_assoc() ){ ?>
                         <li>
                             <div class="invitado">
+<<<<<<< HEAD
                                 <a href="#invitado <?php echo $invitados['invitado_id'] ?>">
                                     <img src="img/<?php echo $invitados['url_imagen'] ?>" alt="Invitado 1">
                                     <p><?php echo $invitados['nombre_invitado'] . " " . $invitados['apellido_invitado'] ?></p>
@@ -32,6 +33,12 @@
                                 <p></p><?php echo $invitados['descripcion']; ?></p>
                             </div>
                         </div>
+=======
+                                <img src="img/<?php echo $invitados['url_imagen'] ?>" alt="Invitado 1">
+                                <p><?php echo $invitados['nombre_invitado'] . " " . $invitados['apellido_invitado'] ?></p>
+                            </div>
+                        </li>
+>>>>>>> 473fd4c457cfa7ea166280fec9960793661e028e
                 <?php  } ?>
             </ul>
         </section>
