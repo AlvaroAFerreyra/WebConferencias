@@ -214,4 +214,8 @@ $(function(){
         $('#segundos').html(event.strftime('%S'));
     })
 
+    //COLORBOX
+
+    $('.invitado_info').colorbox({inline: true, width:"50%", height:"50%"});
+
 });
