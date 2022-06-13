@@ -16,14 +16,47 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
+<<<<<<< HEAD
   <link rel="stylesheet" href="../WebConferencias/css/normalize.css">
+=======
+<<<<<<< HEAD
+  <link rel="stylesheet" href="../WebConferencias/css/normalize.css">
+=======
+<<<<<<< HEAD
+  <link rel="stylesheet" href="../WebConferencias/css/normalize.css">
+=======
+<<<<<<< HEAD
+  <link rel="stylesheet" href="../WebConferencias/css/normalize.css">
+=======
+  <link rel="stylesheet" href="css/normalize.css">
+>>>>>>> 814b8413078c4dfdf5715a8ab04362b460e75456
+>>>>>>> 392024229772099d2bd07406c983b6ceb7190353
+>>>>>>> 473fd4c457cfa7ea166280fec9960793661e028e
+>>>>>>> c290b404bb34c2b174df2f9043052a643ad012de
   <link rel="stylesheet" href="../WebConferencias/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&family=PT+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+<<<<<<< HEAD
   <link rel="stylesheet" href="../WebConferencias/css/main.css">
   <link rel="stylesheet" href="../WebConferencias/css/colorbox.css">
+=======
+<<<<<<< HEAD
+  <link rel="stylesheet" href="../WebConferencias/css/main.css">
+  <link rel="stylesheet" href="../WebConferencias/css/colorbox.css">
+=======
+<<<<<<< HEAD
+  <link rel="stylesheet" href="../WebConferencias/css/main.css">
+=======
+<<<<<<< HEAD
+  <link rel="stylesheet" href="../WebConferencias/css/main.css">
+=======
+  <link rel="stylesheet" href="css/main.css">
+>>>>>>> 814b8413078c4dfdf5715a8ab04362b460e75456
+>>>>>>> 392024229772099d2bd07406c983b6ceb7190353
+>>>>>>> 473fd4c457cfa7ea166280fec9960793661e028e
+>>>>>>> c290b404bb34c2b174df2f9043052a643ad012de
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -66,7 +99,19 @@
       <nav class="navegacion_principal clearfix">
         <a href="conferencia.php">Conferencia</a>
         <a href="calendario.php">Calendario</a>
+<<<<<<< HEAD
         <a href="invitados.php">Invitados</a>
+=======
+<<<<<<< HEAD
+        <a href="invitados.php">Invitados</a>
+=======
+<<<<<<< HEAD
+        <a href="invitados.php">Invitados</a>
+=======
+        <a href="#">Invitados</a>
+>>>>>>> 392024229772099d2bd07406c983b6ceb7190353
+>>>>>>> 473fd4c457cfa7ea166280fec9960793661e028e
+>>>>>>> c290b404bb34c2b174df2f9043052a643ad012de
         <a href="registro.php">Reservaciones</a>
       </nav>
     </div>
