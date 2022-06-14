@@ -216,6 +216,10 @@ $(function(){
 
     //COLORBOX
 
+<<<<<<< HEAD
     $('.invitado_info').colorbox({inline: true, width:"50%"});
+=======
+    $('.invitado_info').colorbox({inline: true, width:"50%", height:"50%"});
+>>>>>>> 01279a17dec833b6096fdb473cea3e02c1fa299b
 
 });
