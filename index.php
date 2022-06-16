@@ -1,4 +1,12 @@
+<<<<<<< HEAD
   <?php include_once 'includes/templates/header.php'; ?>
+=======
+<<<<<<< HEAD
+  <?php include_once 'includes/templates/header.php'; ?>
+=======
+<?php include_once 'includes/templates/header.php'; ?>
+>>>>>>> 01279a17dec833b6096fdb473cea3e02c1fa299b
+>>>>>>> e8499af52520ddcf0a7940986ac4ccb3b922e6ce
 
   <section class="seccion contenedor">
     <h2>La mejor conferencia de diseño web en español</h2>

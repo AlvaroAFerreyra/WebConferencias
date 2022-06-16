@@ -222,6 +222,14 @@ $(function(){
 
     //COLORBOX
 
+<<<<<<< HEAD
     $('.invitado_info').colorbox({inline: true, width:"50%"});
+=======
+<<<<<<< HEAD
+    $('.invitado_info').colorbox({inline: true, width:"50%"});
+=======
+    $('.invitado_info').colorbox({inline: true, width:"50%", height:"50%"});
+>>>>>>> 01279a17dec833b6096fdb473cea3e02c1fa299b
+>>>>>>> e8499af52520ddcf0a7940986ac4ccb3b922e6ce
 
 });
