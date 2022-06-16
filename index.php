@@ -1,73 +1,5 @@
-<!doctype html>
-<html class="no-js" lang="">
+  <?php include_once 'includes/templates/header.php'; ?>
 
-<head>
-  <meta charset="utf-8">
-  <title>GDLWEBCAMP</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="../WebConferencias/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&family=PT+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
-  <link rel="stylesheet" href="css/main.css">
-
-  <meta name="theme-color" content="#fafafa">
-</head>
-
-<body>
-
-  <header class="site_header">
-    <div class="hero">
-      <div class="contenido_header">
-        <nav class="redes_sociales">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-          <a href="#"><i class="fa-brands fa-youtube"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </nav>
-        <div class="informacion_evento">
-          <div class="clearfix">
-            <p class="fecha"><i class="fa-solid fa-calendar-days"></i> 10-12 Dic</p>
-            <p class="ciudad"><i class="fa-solid fa-location-dot"></i> Rosario, Argentina</p>
-          </div>
-          <h1 class="nombre_sitio">GDLWEBCAMP</h1>
-          <p class="eslogan">La mejor conferencia de <span>diseño web</span></p>
-        </div>
-      </div>
-    </div>
-  </header>
-  <div class="barra">
-    <div class="contenedor clearfix">
-      <div class="logo">
-        <img src="../WebConferencias/img/logo.svg" alt="Logo">
-      </div>
-      <div class="menu_movil">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav class="navegacion_principal clearfix">
-        <a href="#">Conferencia</a>
-        <a href="#">Calendario</a>
-        <a href="#">Invitados</a>
-        <a href="../WebConferencias/registro.html">Reservaciones</a>
-      </nav>
-    </div>
-  </div>
   <section class="seccion contenedor">
     <h2>La mejor conferencia de diseño web en español</h2>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam deleniti labore corporis odit culpa accusantium esse mollitia similique vel veritatis? Modi earum excepturi alias optio dolores quae deleniti dolorum doloribus!</p>
@@ -84,11 +16,39 @@
       <div class="contenedor">
         <div class="programa_evento">
           <h2>Programa del evento</h2>
+          <?php 
+            try {
+              require_once('includes/funciones/bd_conexion.php');
+              $sql = "SELECT * FROM `categoria_evento` ";
+              $resultado = $conn->query($sql);
+            } catch (\Exception $e) {
+                $error = $e->getMessage();
+            }
+          ?>
           <nav class="menu_programa">
-            <a href="#talleres"><i class="fa-solid fa-code"></i> Talleres</a>
-            <a href="#conferencias"><i class="fa-solid fa-comment"></i> Conferencias</a>
-            <a href="#seminarios"><i class="fa-solid fa-university"></i> Seminarios</a>
+            <?php while( $cat = $resultado->fetch_array(MYSQLI_ASSOC)){?>
+              <?php $categoria = $cat['cat_evento']; ?>
+              <a href="#<?php echo strtolower($categoria)?>"><i class="fa-solid <?php echo $cat['icono'] ?>"></i> <?php echo $categoria ?></a>
+            <?php } ?>
           </nav>
+
+          <?php
+            try {
+                require_once('includes/funciones/bd_conexion.php');
+                $sql = "SELECT `evento_id`, `nombre_evento`, `fecha_evento`, `hora_evento`, `cat_evento`, `icono`, `nombre_invitado`, `apellido_invitado` ";
+                $sql .= " FROM `eventos` ";
+                $sql .= " INNER JOIN `categoria_evento` ";
+                $sql .= " ON eventos.id_cat_evento = categoria_evento.id_categoria ";
+                $sql .= " INNER JOIN `invitados` ";
+                $sql .= " ON eventos.id_inv = invitados.invitado_id ";
+                $sql .= " AND eventos.id_cat_evento = 1 ";
+                $sql .= " ORDER BY `evento_id` LIMIT 2 ";
+                $resultado = $conn->query($sql);
+            } catch (\Exception $e) {
+                $error = $e->getMessage();
+            }
+          ?>
+
           <div id="#talleres" class="info_curso ocultar clearfix">
             <div class="detalle_evento">
               <h3>HTML5, CSS3 y JavaScript</h3>
@@ -138,47 +98,8 @@
       </div>
     </div>
   </section>
-  <section class="invitados contenedor seccion">
-    <h2>Nuestros invitados</h2>
-    <ul class="lista_invitados clearfix">
-      <li>
-        <div class="invitado">
-          <img src="../WebConferencias/img/invitado1.jpg" alt="Invitado 1">
-          <p>Rafael Bautista</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="../WebConferencias/img/invitado2.jpg" alt="Invitado 2">
-          <p>Shari Herrera</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="../WebConferencias/img/invitado3.jpg" alt="Invitado 3">
-          <p>Gregorio Sanchez</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="../WebConferencias/img/invitado4.jpg" alt="Invitado 4">
-          <p>Susana Rivera</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="../WebConferencias/img/invitado5.jpg" alt="Invitado 5">
-          <p>Harold Garcia</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="../WebConferencias/img/invitado6.jpg" alt="Invitado 6">
-          <p>Susan Sanchez</p>
-        </div>
-      </li>
-    </ul>
-  </section>
+  
+  <?php include_once 'includes/templates/invitados.php'; ?>  
 
 <div class="contador parallax">
   <div class="contenedor">
@@ -284,52 +205,6 @@
     </ul>
   </div>
 </section>
-<footer class="site_footer">{
-  <div class="contenido_footer clearfix">
-    <div class="footer_informacion">
-      <h3>Sobre <span>GDLWEBCAMP</span></h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia libero praesentium a itaque provident perferendis aperiam voluptas tempore quisquam facere veritatis voluptatem, quibusdam sapiente porro nihil iste quo! Modi, unde!</p>
-    </div>
-    <div class="ultimos_tweets">
-      <h3>Últimos <span>tweets</span></h3>
-      <ul>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus iusto nobis a, nostrum molestiae</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus iusto nobis a, nostrum molestiae</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus iusto nobis a, nostrum molestiae</li>
-      </ul>
-    </div>
-    <div class="menu">
-      <h3>Redes <span>sociales</span></h3>
-      <nav class="redes_sociales">
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-      </nav>
-    </div>
-  </div>
-  <p class="copyright">
-    Todos los derechos reservados GDLWEBCAMP 2016
-  </p>
-</footer>
 
-  <script src="js/jQuery.js"></script>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/jquery.lettering.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
-  <script src="js/main.js"></script>
+<?php include_once 'includes/templates/footer.php'; ?>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
-</body>
-
-</html>
