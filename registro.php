@@ -1,76 +1,8 @@
-<!doctype html>
-<html class="no-js" lang="">
-
-<head>
-  <meta charset="utf-8">
-  <title>GDLWEBCAMP</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="../WebConferencias/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&family=PT+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
-
-  <meta name="theme-color" content="#fafafa">
-</head>
-
-<body>
-
-  <header class="site_header">
-    <div class="hero">
-      <div class="contenido_header">
-        <nav class="redes_sociales">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-          <a href="#"><i class="fa-brands fa-youtube"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </nav>
-        <div class="informacion_evento">
-          <div class="clearfix">
-            <p class="fecha"><i class="fa-solid fa-calendar-days"></i> 10-12 Dic</p>
-            <p class="ciudad"><i class="fa-solid fa-location-dot"></i> Rosario, Argentina</p>
-          </div>
-          <h1 class="nombre_sitio">GDLWEBCAMP</h1>
-          <p class="eslogan">La mejor conferencia de <span>diseño web</span></p>
-        </div>
-      </div>
-    </div>
-  </header>
-  <div class="barra">
-    <div class="contenedor clearfix">
-      <div class="logo">
-        <img src="../WebConferencias/img/logo.svg" alt="Logo">
-      </div>
-      <div class="menu_movil">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav class="navegacion_principal clearfix">
-        <a href="#">Conferencia</a>
-        <a href="#">Calendario</a>
-        <a href="#">Invitados</a>
-        <a href="../WebConferencias/registro.html">Reservaciones</a>
-      </nav>
-    </div>
-  </div>
+<?php include_once 'includes/templates/header.php'; ?>
 
   <section class="seccion contenedor">
     <h2>Registro de usuarios</h2>
-    <form id="registro" class="registro" action="">
+    <form id="registro" class="registro" action="validar_registro.php">
       <div id="datos_usuario" class="registro caja clearfix">
         <div class="campo">
           <label for="nombre">Nombre:</label>
@@ -100,7 +32,7 @@
               </ul>
               <div class="orden">
                 <label for="pase_dia">Boletos deseados:</label>
-                <input type="number" min="0" id="pase_dia" size="3" placeholder="0">
+                <input type="number" min="0" id="pase_dia" size="3" name="boletos[]" placeholder="0">
               </div>
             </div>
           </li>
@@ -115,7 +47,7 @@
               </ul>
               <div class="orden">
                 <label for="pase_completo">Boletos deseados:</label>
-                <input type="number" min="0" id="pase_completo" size="3" placeholder="0">
+                <input type="number" min="0" id="pase_completo" size="3" name="boletos[]" placeholder="0">
               </div>
             </div>
           </li>
@@ -130,7 +62,7 @@
               </ul>
               <div class="orden">
                 <label for="pase_dos_dias">Boletos deseados:</label>
-                <input type="number" min="0" id="pase_dos_dias" size="3" placeholder="0">
+                <input type="number" min="0" id="pase_dos_dias" size="3" name="boletos[]" placeholder="0">
               </div>
             </div>
           </li>
@@ -213,19 +145,19 @@
         <div class="extras">
           <div class="orden">
             <label for="camisa_evento">Camisa del evento $10 <small>(promocion 7% de dto.)</small></label><br>
-            <input type="number" min="0" id="camisa_evento" size="3" placeholder="0"> 
+            <input type="number" min="0" id="camisa_evento" name="pedido_camisas" size="3" placeholder="0"> 
           </div>
           <div class="orden">
             <label for="etiquetas">Paquete de 10 etiquetas $2 <small>(HTML5, CSS3, JavaScript, Chrome)</small></label><br>
-            <input type="number" min="0" id="etiquetas" size="3" placeholder="0"> 
+            <input type="number" min="0" id="etiquetas" name="pedido_etiquetas" size="3" placeholder="0"> 
           </div>
           <div class="orden">
             <label for="regalo">Seleccione un regalo</label><br>
-            <select id="regalo" required>
+            <select id="regalo" name="regalo" required>
               <option value="">--Seleccione un regalo--</option>
-              <option value="ETI">Etiquetas</option>
-              <option value="PUL">Pulseras</option>
-              <option value="LAP">Lapicera</option>
+              <option value="2">Etiquetas</option>
+              <option value="1">Pulseras</option>
+              <option value="3">Pluma</option>
             </select>
           </div>
           <input type="button" id="calcular" class="button" value="Calcular">
@@ -239,53 +171,11 @@
           <div id="suma_total">
 
           </div>
-          <input type="submit" id="BtnRegistro" class="button" value="Pagar">
+          <input type="submit" name="submit" id="BtnRegistro" class="button" value="Pagar">
         </div><!--.total-->
       </div><!--.caja-->
     </div><!--resumen-->
     </form>
   </section>
 
-  <footer class="site_footer">{
-        <div class="contenido_footer clearfix">
-            <div class="footer_informacion">
-            <h3>Sobre <span>GDLWEBCAMP</span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia libero praesentium a itaque provident perferendis aperiam voluptas tempore quisquam facere veritatis voluptatem, quibusdam sapiente porro nihil iste quo! Modi, unde!</p>
-            </div>
-            <div class="ultimos_tweets">
-            <h3>Últimos <span>tweets</span></h3>
-            <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus iusto nobis a, nostrum molestiae</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus iusto nobis a, nostrum molestiae</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus iusto nobis a, nostrum molestiae</li>
-            </ul>
-            </div>
-            <div class="menu">
-            <h3>Redes <span>sociales</span></h3>
-            <nav class="redes_sociales">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            </nav>
-            </div>
-        </div>
-        <p class="copyright">
-            Todos los derechos reservados GDLWEBCAMP 2016
-        </p>
-  </footer>
-
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
-</body>
-
-</html>
+<?php include_once 'includes/templates/footer.php'; ?>
