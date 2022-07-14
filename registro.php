@@ -171,7 +171,10 @@
           <div id="suma_total">
 
           </div>
+<<<<<<< HEAD
           <input type="hidden" name="total_pedido" id="total_pedido">
+=======
+>>>>>>> d527f92936274fa9dabad0093ecdfc099055e31b
           <input type="submit" name="submit" id="BtnRegistro" class="button" value="Pagar">
         </div><!--.total-->
       </div><!--.caja-->
