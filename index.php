@@ -1,4 +1,28 @@
+<<<<<<< HEAD
   <?php include_once 'includes/templates/header.php'; ?>
+=======
+<<<<<<< HEAD
+  <?php include_once 'includes/templates/header.php'; ?>
+=======
+<<<<<<< HEAD
+  <?php include_once 'includes/templates/header.php'; ?>
+=======
+<<<<<<< HEAD
+  <?php include_once 'includes/templates/header.php'; ?>
+=======
+<<<<<<< HEAD
+  <?php include_once 'includes/templates/header.php'; ?>
+=======
+<<<<<<< HEAD
+  <?php include_once 'includes/templates/header.php'; ?>
+=======
+<?php include_once 'includes/templates/header.php'; ?>
+>>>>>>> 01279a17dec833b6096fdb473cea3e02c1fa299b
+>>>>>>> e8499af52520ddcf0a7940986ac4ccb3b922e6ce
+>>>>>>> 821c4bf06ee351ee49f4d70f4533350374d6fccc
+>>>>>>> 17236eae116681c6021ae93dfd9fc25f54d25d6b
+>>>>>>> d527f92936274fa9dabad0093ecdfc099055e31b
+>>>>>>> 671e1507b0d949ef98f4255446f2df79f443c9a7
 
   <section class="seccion contenedor">
     <h2>La mejor conferencia de diseño web en español</h2>
@@ -28,7 +52,23 @@
           <nav class="menu_programa">
             <?php while( $cat = $resultado->fetch_array(MYSQLI_ASSOC)){?>
               <?php $categoria = $cat['cat_evento']; ?>
+<<<<<<< HEAD
               <a href="#<?php echo strtolower($categoria); ?>"><i class="fa-solid <?php echo $cat['icono']; ?>"></i> <?php echo $categoria; ?></a>
+=======
+<<<<<<< HEAD
+              <a href="#<?php echo strtolower($categoria); ?>"><i class="fa-solid <?php echo $cat['icono']; ?>"></i> <?php echo $categoria; ?></a>
+=======
+<<<<<<< HEAD
+              <a href="#<?php echo strtolower($categoria); ?>"><i class="fa-solid <?php echo $cat['icono']; ?>"></i> <?php echo $categoria; ?></a>
+=======
+<<<<<<< HEAD
+              <a href="#<?php echo strtolower($categoria); ?>"><i class="fa-solid <?php echo $cat['icono']; ?>"></i> <?php echo $categoria; ?></a>
+=======
+              <a href="#<?php echo strtolower($categoria)?>"><i class="fa-solid <?php echo $cat['icono'] ?>"></i> <?php echo $categoria ?></a>
+>>>>>>> 821c4bf06ee351ee49f4d70f4533350374d6fccc
+>>>>>>> 17236eae116681c6021ae93dfd9fc25f54d25d6b
+>>>>>>> d527f92936274fa9dabad0093ecdfc099055e31b
+>>>>>>> 671e1507b0d949ef98f4255446f2df79f443c9a7
             <?php } ?>
           </nav>
 
@@ -42,6 +82,16 @@
                 $sql .= " INNER JOIN `invitados` ";
                 $sql .= " ON eventos.id_inv = invitados.invitado_id ";
                 $sql .= " AND eventos.id_cat_evento = 1 ";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 17236eae116681c6021ae93dfd9fc25f54d25d6b
+>>>>>>> d527f92936274fa9dabad0093ecdfc099055e31b
+>>>>>>> 671e1507b0d949ef98f4255446f2df79f443c9a7
                 $sql .= " ORDER BY `evento_id` LIMIT 2; ";
                 $sql .= "SELECT `evento_id`, `nombre_evento`, `fecha_evento`, `hora_evento`, `cat_evento`, `icono`, `nombre_invitado`, `apellido_invitado` ";
                 $sql .= " FROM `eventos` ";
@@ -59,11 +109,34 @@
                 $sql .= " ON eventos.id_inv = invitados.invitado_id ";
                 $sql .= " AND eventos.id_cat_evento = 3 ";
                 $sql .= " ORDER BY `evento_id` LIMIT 2; ";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+                $sql .= " ORDER BY `evento_id` LIMIT 2 ";
+                $resultado = $conn->query($sql);
+>>>>>>> 821c4bf06ee351ee49f4d70f4533350374d6fccc
+>>>>>>> 17236eae116681c6021ae93dfd9fc25f54d25d6b
+>>>>>>> d527f92936274fa9dabad0093ecdfc099055e31b
+>>>>>>> 671e1507b0d949ef98f4255446f2df79f443c9a7
             } catch (\Exception $e) {
                 $error = $e->getMessage();
             }
           ?>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 17236eae116681c6021ae93dfd9fc25f54d25d6b
+>>>>>>> d527f92936274fa9dabad0093ecdfc099055e31b
+>>>>>>> 671e1507b0d949ef98f4255446f2df79f443c9a7
           <?php $conn->multi_query($sql); ?>
 
           <?php
@@ -96,6 +169,62 @@
 
             <?php  }while ($conn->more_results() && $conn->next_results()); ?>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+          <div id="#talleres" class="info_curso ocultar clearfix">
+            <div class="detalle_evento">
+              <h3>HTML5, CSS3 y JavaScript</h3>
+              <p><i class="fa-solid fa-clock"></i>16:00 hs.</p>
+              <p><i class="fa-solid fa-calendar"></i>10 de Diciembre</p>
+              <p><i class="fa-solid fa-user"></i>Ferreyra Alvaro Andres</p>
+            </div>
+            <div class="detalle_evento">
+              <h3>Responsive Web Design</h3>
+              <p><i class="fa-solid fa-clock"></i>20:00 hs.</p>
+              <p><i class="fa-solid fa-calendar"></i>10 de Diciembre</p>
+              <p><i class="fa-solid fa-user"></i>Ferreyra Alvaro Andres</p>
+            </div>
+            <a href="" class="button float_right">Ver todos</a>
+          </div>  <!--talleres-->
+          <div id="#conferencias" class="info_curso ocultar clearfix">
+            <div class="detalle_evento">
+              <h3>Como ser freelancer</h3>
+              <p><i class="fa-solid fa-clock"></i>10:00 hs.</p>
+              <p><i class="fa-solid fa-calendar"></i>10 de Diciembre</p>
+              <p><i class="fa-solid fa-user"></i>Gregorio Sanchez</p>
+            </div>
+            <div class="detalle_evento">
+              <h3>Tecnologías del futuro</h3>
+              <p><i class="fa-solid fa-clock"></i>17:00 hs.</p>
+              <p><i class="fa-solid fa-calendar"></i>10 de Diciembre</p>
+              <p><i class="fa-solid fa-user"></i>Susan Sanchez</p>
+            </div>
+            <a href="" class="button float_right">Ver todos</a>
+          </div>  <!--conferencias-->
+          <div id="#seminarios" class="info_curso ocultar clearfix">
+            <div class="detalle_evento">
+              <h3>Diseño UI/UX para móviles</h3>
+              <p><i class="fa-solid fa-clock"></i>17:00 hs.</p>
+              <p><i class="fa-solid fa-calendar"></i>11 de Diciembre</p>
+              <p><i class="fa-solid fa-user"></i>Harold Garcia</p>
+            </div>
+            <div class="detalle_evento">
+              <h3>Aprende a programar en una mañana</h3>
+              <p><i class="fa-solid fa-clock"></i>10:00 hs.</p>
+              <p><i class="fa-solid fa-calendar"></i>11 de Diciembre</p>
+              <p><i class="fa-solid fa-user"></i>Susana Rivera</p>
+            </div>
+            <a href="" class="button float_right">Ver todos</a>
+          </div>  <!--#seminarios-->
+>>>>>>> 821c4bf06ee351ee49f4d70f4533350374d6fccc
+>>>>>>> 17236eae116681c6021ae93dfd9fc25f54d25d6b
+>>>>>>> d527f92936274fa9dabad0093ecdfc099055e31b
+>>>>>>> 671e1507b0d949ef98f4255446f2df79f443c9a7
         </div>
       </div>
     </div>

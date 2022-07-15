@@ -1,8 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 671e1507b0d949ef98f4255446f2df79f443c9a7
 <?php include_once 'includes/templates/header.php'; ?>
 
 <section class="seccion contenedor">
     <h2>Resumen registro</h2>
 
+<<<<<<< HEAD
     <?php if(isset($_POST['submit'])): 
         $nombre = $_POST['nombre'];
         $apellido = $_POST['apellido'];
@@ -26,12 +31,25 @@
         echo "</pre>";
     ?>
 
+=======
+>>>>>>> 671e1507b0d949ef98f4255446f2df79f443c9a7
     <pre>
         <?php var_dump($_POST); ?>
     </pre>
 
+<<<<<<< HEAD
     <?php endif; ?>
 
 </section>    
 
 <?php include_once 'includes/templates/footer.php'; ?>
+=======
+</section>    
+
+<?php include_once 'includes/templates/footer.php'; ?>
+=======
+<pre>
+    <?php var_dump($_POST); ?>
+</pre>
+>>>>>>> d527f92936274fa9dabad0093ecdfc099055e31b
+>>>>>>> 671e1507b0d949ef98f4255446f2df79f443c9a7
