@@ -228,6 +228,34 @@ $(function(){
 
     //COLORBOX
 
+<<<<<<< HEAD
     $('.invitado_info').colorbox({inline: true, width:"50%"});
+=======
+<<<<<<< HEAD
+    $('.invitado_info').colorbox({inline: true, width:"50%"});
+=======
+<<<<<<< HEAD
+    $('.invitado_info').colorbox({inline: true, width:"50%"});
+=======
+<<<<<<< HEAD
+    $('.invitado_info').colorbox({inline: true, width:"50%"});
+=======
+<<<<<<< HEAD
+    $('.invitado_info').colorbox({inline: true, width:"50%"});
+=======
+<<<<<<< HEAD
+    $('.invitado_info').colorbox({inline: true, width:"50%"});
+=======
+<<<<<<< HEAD
+    $('.invitado_info').colorbox({inline: true, width:"50%"});
+=======
+    $('.invitado_info').colorbox({inline: true, width:"50%", height:"50%"});
+>>>>>>> 01279a17dec833b6096fdb473cea3e02c1fa299b
+>>>>>>> e8499af52520ddcf0a7940986ac4ccb3b922e6ce
+>>>>>>> 821c4bf06ee351ee49f4d70f4533350374d6fccc
+>>>>>>> 17236eae116681c6021ae93dfd9fc25f54d25d6b
+>>>>>>> d527f92936274fa9dabad0093ecdfc099055e31b
+>>>>>>> 671e1507b0d949ef98f4255446f2df79f443c9a7
+>>>>>>> ea60202389c94d3630f12757e474e2ba3ea37586
 
 });

@@ -10,6 +10,7 @@
             endif;    
         endforeach;    
 
+<<<<<<< HEAD
         $camisas = (int) $camisas;
         if($camisas > 0):
            $json['camisas'] = $camisas; 
@@ -33,3 +34,7 @@
     }
 
 ?>    
+=======
+        return json_encode($json);
+    }
+>>>>>>> ea60202389c94d3630f12757e474e2ba3ea37586
