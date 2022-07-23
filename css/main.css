@@ -552,9 +552,9 @@ ul{
 
 /*INVITADOS*/
 
-.invitados{
+/*.invitados{
   margin-top: 180px;
-}
+}*/
 
 .lista_invitados li{
   padding: 10px;
@@ -913,7 +913,11 @@ footer .redes_sociales{
   margin-bottom: 5px;
 }
 
-.conferencia .navegacion_principal .activo{
+.navegacion_principal .activo{
+  border-bottom: 2px solid #fe4918;
+}
+
+.activo{
   border-bottom: 2px solid #fe4918;
 }
 
@@ -1042,6 +1046,75 @@ h4{
   text-align: center;
   font-size: 2em;
   color: #fe4918;
+}
+
+input[disabled].button{
+  opacity: .5;
+}
+
+#error{
+  clear: both;
+  padding: 20px;
+  text-align: center;
+  display: none;
+}
+
+/*CALENDARIO*/
+
+.calendario h3{
+  background-color: #fe4918;
+  clear: both;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.calendario::after{
+  clear: both;
+  display: block;
+  content: '';
+}
+
+.dia{
+  width: 50%;
+  float: left;
+  border: 2px solid #e1e1e1;
+  transition: all .3s ease;
+}
+
+@media only screen and (min-width:768px){
+  .dia{
+    width: 33.3%;
+    min-height: 240px;
+    padding-top: 20px;
+  }
+}
+
+.dia:hover{
+  background-color: #e1e1e1;
+  -webkit-transform: scale(1.1);
+}
+
+.dia .titulo{
+  color: #fe4918;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.dia p{
+  font-size: 1em; 
+}
+
+.dia i{
+  color: #fe4918;
+  font-size: 1.6em;
+}
+
+/*COLORBOX*/
+
+.cboxElement{
+  padding: 30px!important;
+  text-align: center;
 }
 
 /* ==========================================================================
