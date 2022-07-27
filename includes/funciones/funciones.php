@@ -10,6 +10,16 @@
             endif;    
         endforeach;    
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a0008419a83e47c0d7a36e2c60ad7d66b87edfd7
+>>>>>>> d74f43ff6c3999d6924a78930ca152fdbebfdc16
+>>>>>>> d94aac461fff4e455663cc81eb9762ddeb8782b5
         $camisas = (int) $camisas;
         if($camisas > 0):
            $json['camisas'] = $camisas; 
@@ -32,4 +42,20 @@
         return json_encode($eventos_json);
     }
 
+<<<<<<< HEAD
 ?>    
+=======
+<<<<<<< HEAD
+?>    
+=======
+<<<<<<< HEAD
+?>    
+=======
+?>    
+=======
+        return json_encode($json);
+    }
+>>>>>>> ea60202389c94d3630f12757e474e2ba3ea37586
+>>>>>>> a0008419a83e47c0d7a36e2c60ad7d66b87edfd7
+>>>>>>> d74f43ff6c3999d6924a78930ca152fdbebfdc16
+>>>>>>> d94aac461fff4e455663cc81eb9762ddeb8782b5
